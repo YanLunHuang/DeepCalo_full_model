@@ -17,6 +17,6 @@ XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u50_xdma_201920_1/alv
 This version copies all layers in image-only model.
 link: https://github.com/YanLunHuang/alveo_u50_sucess/tree/8_24_pooling_again
 
-I set the precision to ap_fixed<16,6>, and the BRAM part doesn't increase a lot compared to ap_fixed<10,6>.
+I set the precision to ap_fixed<16,6>, and the BRAM part does not increase a lot compared to ap_fixed<10,6>.
 The reuse factors in all convolution layers are equal to n_in.
 ```
