@@ -16,6 +16,7 @@ XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u50_xdma_201920_1/alv
 ```bash
 The pooling layer & dense_ss are the final version.
 (It has the best performance and routing result.)
+The slack in the model is equal zero or pisitive, so the clock period can run on 5 ns precisely.
 
 In order to reduce the BRAM usage, I set the precision to 8 bits.
 The reuse factors in all convolution layers are the same as the ones Dylan used.
