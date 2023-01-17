@@ -16,7 +16,7 @@ XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u50_xdma_201920_1/alv
 ```bash
 Test 10,000 times and calculate the average.
 Total time : 1.26ms
-Kernel time : 1.16 ms
+Kernel time : 1.16ms
 ```
 ## Some detail
 ```bash
