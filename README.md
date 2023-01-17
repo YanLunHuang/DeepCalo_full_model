@@ -12,6 +12,12 @@ XCL_EMULATION_MODE=sw_emu ./host ./build_dir.sw_emu.xilinx_u50_xdma_201920_1/alv
 XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u50_xdma_201920_1/alveo_hls4ml.xclbin  # hardware emulation
 ./host alveo_hls4ml.xclbin  # run on U50
 ```
+## Latency
+```bash
+Test 10,000 times and calculate the average
+Total time : 1.26ms
+Kernel time : 1.16 ms
+```
 ## Some detail
 ```bash
 The pooling layer & dense_ss are the final version.
