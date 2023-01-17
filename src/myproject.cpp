@@ -45,7 +45,6 @@ void myproject(
 ) {
 
     //hls-fpga-machine-learning insert IO
-    #pragma HLS INTERFACE axis port=em_endcap,scalars,tracks,layer87_out 
     #pragma HLS DATAFLOW 
 
 #ifndef __SYNTHESIS__
