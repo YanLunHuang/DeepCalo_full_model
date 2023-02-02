@@ -1,0 +1,188 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_ZN8ap_fixedILi32ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei_exit80_proc899'
+================================================================
+* Date:           Fri Jan 27 16:51:45 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        alveo_hls4ml
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.100 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        8|        8| 32.000 ns | 32.000 ns |    8|    8|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++---------------------+---------+-------+---------+--------+-----+
+|DSP                  |        -|      -|        -|       -|    -|
+|Expression           |        -|      -|        0|       2|    -|
+|FIFO                 |        -|      -|        -|       -|    -|
+|Instance             |        -|      -|        -|       -|    -|
+|Memory               |        -|      -|        -|       -|    -|
+|Multiplexer          |        -|      -|        -|     116|    -|
+|Register             |        -|      -|      104|       -|    -|
++---------------------+---------+-------+---------+--------+-----+
+|Total                |        0|      0|      104|     118|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available SLR        |     1344|   2976|   871680|  435840|  320|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization SLR (%)  |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available            |     2688|   5952|  1743360|  871680|  640|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization (%)      |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+-------+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1  |    or    |      0|  0|   2|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |Total            |          |      0|  0|   2|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------+----+-----------+-----+-----------+
+    |          Name          | LUT| Input Size| Bits| Total Bits|
+    +------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm               |  47|         10|    1|         10|
+    |ap_done                 |   9|          2|    1|          2|
+    |m_axi_out_V_WDATA       |  15|          3|   32|         96|
+    |out_V_blk_n_AW          |   9|          2|    1|          2|
+    |out_V_blk_n_B           |   9|          2|    1|          2|
+    |out_V_blk_n_W           |   9|          2|    1|          2|
+    |out_V_offset_blk_n      |   9|          2|    1|          2|
+    |out_stream_0_V_V_blk_n  |   9|          2|    1|          2|
+    +------------------------+----+-----------+-----+-----------+
+    |Total                   | 116|         25|   39|        118|
+    +------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------+----+----+-----+-----------+
+    |        Name        | FF | LUT| Bits| Const Bits|
+    +--------------------+----+----+-----+-----------+
+    |ap_CS_fsm           |   9|   0|    9|          0|
+    |ap_done_reg         |   1|   0|    1|          0|
+    |out_V_addr_reg_101  |  62|   0|   64|          2|
+    |tmp_V_reg_108       |  32|   0|   32|          0|
+    +--------------------+----+----+-----+-----------+
+    |Total               | 104|   0|  106|          2|
+    +--------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+---------------------------------------------------------------------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |                                  Source Object                                  |    C Type    |
++--------------------------+-----+-----+------------+---------------------------------------------------------------------------------+--------------+
+|ap_clk                    |  in |    1| ap_ctrl_hs | Block__ZN8ap_fixedILi32ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit80_proc899 | return value |
+|ap_rst                    |  in |    1| ap_ctrl_hs | Block__ZN8ap_fixedILi32ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit80_proc899 | return value |
+|ap_start                  |  in |    1| ap_ctrl_hs | Block__ZN8ap_fixedILi32ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit80_proc899 | return value |
+|ap_done                   | out |    1| ap_ctrl_hs | Block__ZN8ap_fixedILi32ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit80_proc899 | return value |
+|ap_continue               |  in |    1| ap_ctrl_hs | Block__ZN8ap_fixedILi32ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit80_proc899 | return value |
+|ap_idle                   | out |    1| ap_ctrl_hs | Block__ZN8ap_fixedILi32ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit80_proc899 | return value |
+|ap_ready                  | out |    1| ap_ctrl_hs | Block__ZN8ap_fixedILi32ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1Ei.exit80_proc899 | return value |
+|out_stream_0_V_V_dout     |  in |   32|   ap_fifo  |                                 out_stream_0_V_V                                |    pointer   |
+|out_stream_0_V_V_empty_n  |  in |    1|   ap_fifo  |                                 out_stream_0_V_V                                |    pointer   |
+|out_stream_0_V_V_read     | out |    1|   ap_fifo  |                                 out_stream_0_V_V                                |    pointer   |
+|m_axi_out_V_AWVALID       | out |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_AWREADY       |  in |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_AWADDR        | out |   64|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_AWID          | out |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_AWLEN         | out |   32|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_AWSIZE        | out |    3|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_AWBURST       | out |    2|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_AWLOCK        | out |    2|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_AWCACHE       | out |    4|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_AWPROT        | out |    3|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_AWQOS         | out |    4|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_AWREGION      | out |    4|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_AWUSER        | out |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_WVALID        | out |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_WREADY        |  in |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_WDATA         | out |   32|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_WSTRB         | out |    4|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_WLAST         | out |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_WID           | out |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_WUSER         | out |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_ARVALID       | out |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_ARREADY       |  in |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_ARADDR        | out |   64|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_ARID          | out |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_ARLEN         | out |   32|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_ARSIZE        | out |    3|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_ARBURST       | out |    2|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_ARLOCK        | out |    2|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_ARCACHE       | out |    4|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_ARPROT        | out |    3|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_ARQOS         | out |    4|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_ARREGION      | out |    4|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_ARUSER        | out |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_RVALID        |  in |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_RREADY        | out |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_RDATA         |  in |   32|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_RLAST         |  in |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_RID           |  in |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_RUSER         |  in |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_RRESP         |  in |    2|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_BVALID        |  in |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_BREADY        | out |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_BRESP         |  in |    2|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_BID           |  in |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|m_axi_out_V_BUSER         |  in |    1|    m_axi   |                                      out_V                                      |    pointer   |
+|out_V_offset_dout         |  in |   64|   ap_fifo  |                                   out_V_offset                                  |    pointer   |
+|out_V_offset_empty_n      |  in |    1|   ap_fifo  |                                   out_V_offset                                  |    pointer   |
+|out_V_offset_read         | out |    1|   ap_fifo  |                                   out_V_offset                                  |    pointer   |
++--------------------------+-----+-----+------------+---------------------------------------------------------------------------------+--------------+
+

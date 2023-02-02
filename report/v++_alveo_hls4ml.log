@@ -1,0 +1,494 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/reports/link
+	Log files: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/logs/link
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/alveo_hls4ml.xclbin.link_summary, at Fri Jan 27 17:07:14 2023
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Fri Jan 27 17:07:14 2023
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/reports/link/v++_link_alveo_hls4ml_guidance.html', at Fri Jan 27 17:07:15 2023
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u50_xdma_201920_1/xilinx_u50_xdma_201920_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Device Support Archive '/opt/xilinx/platforms/xilinx_u50_xdma_201920_1/hw/xilinx_u50_xdma_201920_1.dsa'
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u50_xdma_201920_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [17:08:21] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /home/YL_HUANG/1_28/alveo_u50_full_model_array/_x.hw.xilinx_u50_xdma_201920_1/alveo_hls4ml.xo -keep --config /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u50_xdma_201920_1/xilinx_u50_xdma_201920_1.xpfm --target hw --output_dir /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int --temp_dir /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/run_link
+INFO: [SYSTEM_LINK 82-76] Reading emulation BD and HPFM information
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Fri Jan 27 17:08:23 2023
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/YL_HUANG/1_28/alveo_u50_full_model_array/_x.hw.xilinx_u50_xdma_201920_1/alveo_hls4ml.xo
+INFO: [KernelCheck 83-118] 'alveo_hls4ml' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'em_barrel' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'scalars' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'tracks' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [KernelCheck 83-118] 'out' kernel.xml and component.xml caseness discrepency is being corrected, S_AXI_CONTROL is being replaced by s_axi_control
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [17:08:25] build_xd_ip_db started: /opt/Xilinx/Vitis/2019.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link/xilinx_u50_xdma_201920_1.hpfm -clkid 0 -ip /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link/iprepo/xilinx_com_hls_alveo_hls4ml_1_0,alveo_hls4ml -o /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [17:08:28] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 286.324 ; gain = 0.000 ; free physical = 25425 ; free virtual = 107097
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [17:08:28] cfgen started: /opt/Xilinx/Vitis/2019.2/bin/cfgen  -sp alveo_hls4ml_1.em_barrel:HBM[0] -sp alveo_hls4ml_1.scalars:HBM[1] -sp alveo_hls4ml_1.tracks:HBM[2] -sp alveo_hls4ml_1.out:HBM[3] -dmclkid 0 -r /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: alveo_hls4ml, num: 1  {alveo_hls4ml_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: alveo_hls4ml_1, k_port: em_barrel, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: alveo_hls4ml_1, k_port: scalars, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: alveo_hls4ml_1, k_port: tracks, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: alveo_hls4ml_1, k_port: out, sptag: HBM[3]
+INFO: [CFGEN 83-2228] Creating mapping for argument alveo_hls4ml_1.em_barrel to HBM[0] for directive alveo_hls4ml_1.em_barrel:HBM[0]
+INFO: [CFGEN 83-2228] Creating mapping for argument alveo_hls4ml_1.scalars to HBM[1] for directive alveo_hls4ml_1.scalars:HBM[1]
+INFO: [CFGEN 83-2228] Creating mapping for argument alveo_hls4ml_1.tracks to HBM[2] for directive alveo_hls4ml_1.tracks:HBM[2]
+INFO: [CFGEN 83-2228] Creating mapping for argument alveo_hls4ml_1.out to HBM[3] for directive alveo_hls4ml_1.out:HBM[3]
+INFO: [SYSTEM_LINK 82-37] [17:08:30] cfgen finished successfully
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 287.691 ; gain = 0.000 ; free physical = 25424 ; free virtual = 107096
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [17:08:30] cf2bd started: /opt/Xilinx/Vitis/2019.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link/_sysl/.xsd --temp_dir /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link --output_dir /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int --target_bd pfm_dynamic.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd pfm_dynamic.bd -dn dr -dp /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [17:08:32] cf2bd finished successfully
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 287.691 ; gain = 0.000 ; free physical = 25419 ; free virtual = 107096
+INFO: [v++ 60-1441] [17:08:32] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 692.887 ; gain = 0.000 ; free physical = 25437 ; free virtual = 107114
+INFO: [v++ 60-1443] [17:08:32] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/sdsl.dat -rtd /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/cf2sw.rtd -xclbin /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/xclbin_orig.xml -o /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/run_link
+INFO: [v++ 60-1441] [17:08:33] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 692.887 ; gain = 0.000 ; free physical = 25439 ; free virtual = 107117
+INFO: [v++ 60-1443] [17:08:33] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram --rtdJsonFileName /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/cf2sw.rtd --diagramJsonFileName /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/systemDiagramModel.json --platformFilePath /opt/xilinx/platforms/xilinx_u50_xdma_201920_1/xilinx_u50_xdma_201920_1.xpfm --generatedByName v++ --generatedByVersion 2019.2 --generatedByChangeList 2708876 --generatedByTimeStamp Wed Nov  6 21:39:14 MST 2019 --generatedByOptions /opt/Xilinx/Vitis/2019.2/bin/unwrapped/lnx64.o/v++ -t hw --platform xilinx_u50_xdma_201920_1 --save-temps --temp_dir ./build_dir.hw.xilinx_u50_xdma_201920_1 -l -obuild_dir.hw.xilinx_u50_xdma_201920_1/alveo_hls4ml.xclbin _x.hw.xilinx_u50_xdma_201920_1/alveo_hls4ml.xo --config config.ini --kernel_frequency 200  --generatedByXclbinName alveo_hls4ml --kernelInfoDataFileName /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/kernel_info.dat
+INFO: [v++ 60-1454] Run Directory: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/run_link
+INFO: [v++ 60-839] Read in kernel information from file '/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/kernel_info.dat'.
+WARNING: [v++ 82-157] Unable to populate kernel available resources BRAM entry.
+WARNING: [v++ 82-158] Unable to populate kernel available resources DSP entry.
+INFO: [v++ 60-1441] [17:08:35] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 692.887 ; gain = 0.000 ; free physical = 25437 ; free virtual = 107115
+INFO: [v++ 60-1443] [17:08:35] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u50_xdma_201920_1 --kernel_frequency 200 -s --output_dir /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int --log_dir /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/logs/link --report_dir /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/reports/link --config /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/vplConfig.ini -k /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link --no-info --tlog_dir /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/.tlog/v++_link_alveo_hls4ml --iprepo /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/xo/ip_repo/xilinx_com_hls_alveo_hls4ml_1_0 --messageDb /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/run_link/vpl.pb /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/run_link
+
+****** vpl v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/kernel_info.dat'.
+INFO: [VPL 60-423]   Target device: xilinx_u50_xdma_201920_1
+INFO: [VPL 60-1032] Extracting hardware platform to /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/vivado/vpl/.local/hw_platform
+[17:08:59] Run vpl: Step create_project: Started
+Creating Vivado project.
+[17:09:03] Run vpl: Step create_project: Completed
+[17:09:03] Run vpl: Step create_bd: Started
+[17:10:19] Run vpl: Step create_bd: RUNNING...
+[17:10:35] Run vpl: Step create_bd: Completed
+[17:10:35] Run vpl: Step update_bd: Started
+[17:10:36] Run vpl: Step update_bd: Completed
+[17:10:36] Run vpl: Step generate_target: Started
+[17:11:40] Run vpl: Step generate_target: Completed
+[17:11:40] Run vpl: Step config_hw_runs: Started
+[17:11:55] Run vpl: Step config_hw_runs: Completed
+[17:11:55] Run vpl: Step synth: Started
+[17:12:56] Block-level synthesis in progress, 0 of 64 jobs complete, 8 jobs running.
+[17:13:28] Block-level synthesis in progress, 0 of 64 jobs complete, 8 jobs running.
+[17:13:58] Block-level synthesis in progress, 0 of 64 jobs complete, 8 jobs running.
+[17:14:28] Block-level synthesis in progress, 0 of 64 jobs complete, 8 jobs running.
+[17:14:59] Block-level synthesis in progress, 8 of 64 jobs complete, 0 jobs running.
+[17:15:29] Block-level synthesis in progress, 8 of 64 jobs complete, 8 jobs running.
+[17:16:00] Block-level synthesis in progress, 8 of 64 jobs complete, 8 jobs running.
+[17:16:30] Block-level synthesis in progress, 8 of 64 jobs complete, 8 jobs running.
+[17:17:01] Block-level synthesis in progress, 8 of 64 jobs complete, 8 jobs running.
+[17:17:31] Block-level synthesis in progress, 13 of 64 jobs complete, 3 jobs running.
+[17:18:02] Block-level synthesis in progress, 16 of 64 jobs complete, 7 jobs running.
+[17:18:32] Block-level synthesis in progress, 16 of 64 jobs complete, 8 jobs running.
+[17:19:03] Block-level synthesis in progress, 16 of 64 jobs complete, 8 jobs running.
+[17:19:33] Block-level synthesis in progress, 16 of 64 jobs complete, 8 jobs running.
+[17:20:04] Block-level synthesis in progress, 16 of 64 jobs complete, 8 jobs running.
+[17:20:34] Block-level synthesis in progress, 21 of 64 jobs complete, 7 jobs running.
+[17:21:05] Block-level synthesis in progress, 26 of 64 jobs complete, 4 jobs running.
+[17:21:35] Block-level synthesis in progress, 30 of 64 jobs complete, 6 jobs running.
+[17:22:06] Block-level synthesis in progress, 31 of 64 jobs complete, 7 jobs running.
+[17:22:36] Block-level synthesis in progress, 31 of 64 jobs complete, 8 jobs running.
+[17:23:07] Block-level synthesis in progress, 32 of 64 jobs complete, 7 jobs running.
+[17:23:38] Block-level synthesis in progress, 36 of 64 jobs complete, 5 jobs running.
+[17:24:08] Block-level synthesis in progress, 41 of 64 jobs complete, 6 jobs running.
+[17:24:39] Block-level synthesis in progress, 44 of 64 jobs complete, 6 jobs running.
+[17:25:10] Block-level synthesis in progress, 44 of 64 jobs complete, 8 jobs running.
+[17:25:40] Block-level synthesis in progress, 45 of 64 jobs complete, 7 jobs running.
+[17:26:11] Block-level synthesis in progress, 46 of 64 jobs complete, 7 jobs running.
+[17:26:42] Block-level synthesis in progress, 47 of 64 jobs complete, 8 jobs running.
+[17:27:13] Block-level synthesis in progress, 51 of 64 jobs complete, 6 jobs running.
+[17:27:43] Block-level synthesis in progress, 53 of 64 jobs complete, 7 jobs running.
+[17:28:14] Block-level synthesis in progress, 54 of 64 jobs complete, 7 jobs running.
+[17:28:45] Block-level synthesis in progress, 54 of 64 jobs complete, 8 jobs running.
+[17:29:16] Block-level synthesis in progress, 56 of 64 jobs complete, 7 jobs running.
+[17:29:47] Block-level synthesis in progress, 56 of 64 jobs complete, 7 jobs running.
+[17:30:18] Block-level synthesis in progress, 60 of 64 jobs complete, 3 jobs running.
+[17:30:48] Block-level synthesis in progress, 62 of 64 jobs complete, 2 jobs running.
+[17:31:19] Block-level synthesis in progress, 62 of 64 jobs complete, 2 jobs running.
+[17:31:50] Block-level synthesis in progress, 62 of 64 jobs complete, 2 jobs running.
+[17:32:21] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:32:52] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:33:22] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:33:53] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:34:24] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:34:55] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:35:26] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:35:56] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:36:27] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:36:58] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:37:29] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:38:00] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:38:30] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:39:02] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:39:33] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:40:05] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:40:36] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:41:08] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:41:39] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:42:11] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:42:42] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:43:14] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:43:45] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:44:17] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:44:48] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:45:19] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:45:51] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:46:22] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:46:54] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:47:25] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:47:57] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:48:28] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:49:00] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:49:31] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:50:03] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:50:34] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:51:06] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:51:37] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:52:09] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:52:40] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:53:12] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:53:43] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:54:15] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:54:46] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:55:18] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:55:49] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:56:21] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:56:52] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:57:24] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:57:55] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:58:27] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:58:58] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[17:59:30] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:00:02] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:00:34] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:01:05] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:01:37] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:02:09] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:02:41] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:03:13] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:03:44] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:04:16] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:04:48] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:05:20] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:05:52] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:06:23] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:06:55] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:07:27] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:07:59] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:08:31] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:09:02] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:09:34] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:10:06] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:10:38] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:11:09] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:11:41] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:12:13] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:12:45] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:13:17] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:13:48] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:14:20] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:14:52] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:15:24] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:15:56] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:16:27] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:16:59] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:17:31] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:18:03] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:18:35] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:19:06] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:19:38] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:20:10] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:20:42] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:21:13] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:21:45] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:22:17] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:22:49] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:23:21] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:23:52] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:24:24] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:24:56] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:25:28] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:26:00] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:26:31] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:27:03] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:27:35] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:28:07] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:28:39] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:29:10] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:29:42] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:30:14] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:30:46] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:31:17] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:31:49] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:32:21] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:32:53] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:33:25] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:33:56] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:34:28] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:35:00] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:35:32] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:36:03] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:36:35] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:37:07] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:37:39] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:38:11] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:38:42] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:39:14] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:39:46] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:40:18] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:40:50] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:41:21] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:41:53] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:42:25] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:42:57] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:43:29] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:44:00] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:44:32] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:45:04] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:45:36] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:46:08] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:46:39] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:47:11] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:47:43] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:48:15] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:48:47] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:49:19] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:49:50] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:50:22] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:50:54] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:51:26] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:51:58] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:52:29] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:53:01] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:53:33] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:54:05] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:54:36] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:55:08] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:55:40] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:56:12] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:56:44] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:57:15] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:57:47] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:58:19] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:58:51] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:59:23] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[18:59:54] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:00:26] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:00:58] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:01:31] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:02:03] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:02:35] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:03:07] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:03:39] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:04:11] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:04:43] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:05:15] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:05:47] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:06:19] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:06:51] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:07:23] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:07:55] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:08:27] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:08:59] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:09:31] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:10:03] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:10:35] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:11:07] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:11:39] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:12:11] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:12:43] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:13:15] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:13:47] Block-level synthesis in progress, 63 of 64 jobs complete, 1 job running.
+[19:14:19] Block-level synthesis in progress, 64 of 64 jobs complete, 0 jobs running.
+[19:14:51] Top-level synthesis in progress.
+[19:15:23] Top-level synthesis in progress.
+[19:15:55] Top-level synthesis in progress.
+[19:16:27] Top-level synthesis in progress.
+[19:16:59] Top-level synthesis in progress.
+[19:17:12] Run vpl: Step synth: Completed
+[19:17:12] Run vpl: Step impl: Started
+[19:36:20] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 02h 27m 43s 
+
+[19:36:20] Starting logic optimization..
+[19:36:52] Phase 1 Generate And Synthesize Debug Cores
+[19:41:38] Phase 2 Retarget
+[19:42:10] Phase 3 Constant propagation
+[19:42:42] Phase 4 Sweep
+[19:44:17] Phase 5 BUFG optimization
+[19:45:21] Phase 6 Shift Register Optimization
+[19:45:21] Phase 7 Post Processing Netlist
+[19:48:00] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 11m 40s 
+
+[19:48:00] Starting logic placement..
+[19:49:04] Phase 1 Placer Initialization
+[19:49:04] Phase 1.1 Placer Initialization Netlist Sorting
+[19:51:11] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[19:53:50] Phase 1.3 Build Placer Netlist Model
+[19:59:09] Phase 1.4 Constrain Clocks/Macros
+[19:59:41] Phase 2 Global Placement
+[19:59:41] Phase 2.1 Floorplanning
+[20:07:41] Phase 2.2 Global Placement Core
+[20:20:30] Phase 2.2.1 Physical Synthesis In Placer
+[20:34:23] Phase 3 Detail Placement
+[20:34:23] Phase 3.1 Commit Multi Column Macros
+[20:34:55] Phase 3.2 Commit Most Macros & LUTRAMs
+[20:36:00] Phase 3.3 Area Swap Optimization
+[20:37:04] Phase 3.4 Pipeline Register Optimization
+[20:37:04] Phase 3.5 IO Cut Optimizer
+[20:37:04] Phase 3.6 Fast Optimization
+[20:39:44] Phase 3.7 Small Shape DP
+[20:39:44] Phase 3.7.1 Small Shape Clustering
+[20:40:48] Phase 3.7.2 Flow Legalize Slice Clusters
+[20:40:48] Phase 3.7.3 Slice Area Swap
+[20:42:24] Phase 3.7.4 Commit Slice Clusters
+[20:42:56] Phase 3.8 Place Remaining
+[20:43:28] Phase 3.9 Re-assign LUT pins
+[20:44:33] Phase 3.10 Pipeline Register Optimization
+[20:44:33] Phase 3.11 Fast Optimization
+[20:47:45] Phase 4 Post Placement Optimization and Clean-Up
+[20:47:45] Phase 4.1 Post Commit Optimization
+[20:50:57] Phase 4.1.1 Post Placement Optimization
+[20:51:29] Phase 4.1.1.1 BUFG Insertion
+[20:56:18] Phase 4.1.1.2 BUFG Replication
+[20:57:54] Phase 4.1.1.3 Replication
+[21:00:02] Phase 4.2 Post Placement Cleanup
+[21:02:10] Phase 4.3 Placer Reporting
+[21:02:10] Phase 4.4 Final Placement Cleanup
+[21:12:51] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 01h 24m 50s 
+
+[21:12:51] Starting logic routing..
+[21:14:27] Phase 1 Build RT Design
+[21:18:44] Phase 2 Router Initialization
+[21:19:16] Phase 2.1 Fix Topology Constraints
+[21:19:16] Phase 2.2 Pre Route Cleanup
+[21:19:48] Phase 2.3 Global Clock Net Routing
+[21:21:24] Phase 2.4 Update Timing
+[21:27:49] Phase 2.5 Update Timing for Bus Skew
+[21:27:49] Phase 2.5.1 Update Timing
+[21:30:29] Phase 3 Initial Routing
+[21:30:29] Phase 3.1 Global Routing
+[21:34:46] Phase 4 Rip-up And Reroute
+[21:34:46] Phase 4.1 Global Iteration 0
+[22:12:10] Phase 4.2 Global Iteration 1
+[22:19:06] Phase 4.3 Global Iteration 2
+[22:26:03] Phase 4.4 Global Iteration 3
+[22:32:59] Phase 5 Delay and Skew Optimization
+[22:32:59] Phase 5.1 Delay CleanUp
+[22:32:59] Phase 5.1.1 Update Timing
+[22:35:39] Phase 5.2 Clock Skew Optimization
+[22:36:12] Phase 6 Post Hold Fix
+[22:36:12] Phase 6.1 Hold Fix Iter
+[22:36:12] Phase 6.1.1 Update Timing
+[22:38:52] Phase 7 Leaf Clock Prog Delay Opt
+[22:41:00] Phase 8 Route finalize
+[22:41:00] Phase 9 Verifying routed nets
+[22:41:32] Phase 10 Depositing Routes
+[22:43:09] Phase 11 Post Router Timing
+[22:43:41] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 01h 30m 49s 
+
+[22:43:41] Starting bitstream generation..
+[23:03:28] Creating bitmap...
+[23:11:28] Writing bitstream ./pfm_top_i_L1_L1_URP_my_rm_partial.bit...
+[23:11:28] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 27m 47s 
+[23:12:21] Run vpl: Step impl: Completed
+[23:12:24] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [23:12:24] Run run_link: Step vpl: Completed
+Time (s): cpu = 03:19:06 ; elapsed = 06:03:49 . Memory (MB): peak = 692.887 ; gain = 0.000 ; free physical = 28404 ; free virtual = 107533
+INFO: [v++ 60-1443] [23:12:24] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/run_link
+INFO: [v++ 60-991] clock name 'clkwiz_kernel2_clk_out1' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'clkwiz_kernel_clk_out1' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): Kernel (KERNEL) clock: clkwiz_kernel2_clk_out1 = 500, Kernel (DATA) clock: clkwiz_kernel_clk_out1 = 200
+INFO: [v++ 60-1453] Command Line: cf2sw -a /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/address_map.xml -sdsl /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/sdsl.dat -xclbin /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/xclbin_orig.xml -rtd /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/alveo_hls4ml.rtd -o /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/alveo_hls4ml.xml
+INFO: [v++ 60-1618] Launching 
+INFO: [v++ 60-1441] [23:12:27] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 692.887 ; gain = 0.000 ; free physical = 28403 ; free virtual = 107532
+INFO: [v++ 60-1443] [23:12:27] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section BITSTREAM:RAW:/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/partial.bit --force --key-value SYS:mode:hw_pr --add-section :JSON:/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/alveo_hls4ml.rtd --append-section :JSON:/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/alveo_hls4ml_xml.rtd --add-section BUILD_METADATA:JSON:/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/alveo_hls4ml_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/alveo_hls4ml.xml --add-section SYSTEM_METADATA:RAW:/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/systemDiagramModelSlrBaseAddress.json --output /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/alveo_hls4ml.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/run_link
+XRT Build Version: 2.3.1301
+       Build Date: 2019-10-25 03:04:42
+          Hash ID: 192e706aea53163a04c574f9b3fe9ed76b6ca471
+Creating a default 'in-memory' xclbin image.
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 57670314 bytes
+Format : RAW
+File   : '/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/partial.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 274 bytes
+Format : JSON
+File   : '/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/alveo_hls4ml_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 3408 bytes
+Format : JSON
+File   : '/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/alveo_hls4ml_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 1706983 bytes
+Format : RAW
+File   : '/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/alveo_hls4ml.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 11945 bytes
+Format : RAW
+File   : '/home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (59410668 bytes) to the output file: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/alveo_hls4ml.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [23:12:27] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.10 . Memory (MB): peak = 692.887 ; gain = 0.000 ; free physical = 28347 ; free virtual = 107533
+INFO: [v++ 60-1443] [23:12:27] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --info /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/alveo_hls4ml.xclbin.info --input /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/int/alveo_hls4ml.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/link/run_link
+INFO: [v++ 60-1441] [23:12:27] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.48 . Memory (MB): peak = 692.887 ; gain = 0.000 ; free physical = 28347 ; free virtual = 107533
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/reports/link/system_estimate_alveo_hls4ml.xtxt
+INFO: [v++ 60-586] Created /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/alveo_hls4ml.ltx
+INFO: [v++ 60-586] Created build_dir.hw.xilinx_u50_xdma_201920_1/alveo_hls4ml.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/reports/link/v++_link_alveo_hls4ml_guidance.html
+	Timing Report: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/reports/link/imp/xilinx_u50_xdma_201920_1_bb_locked_timing_summary_routed.rpt
+	Utilizations Report: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/reports/link/imp/kernel_util_routed.rpt
+	Vivado Log: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/logs/link/vivado.log
+	Steps Log File: /home/YL_HUANG/1_28/alveo_u50_full_model_array/build_dir.hw.xilinx_u50_xdma_201920_1/logs/link/link.steps.log
+
+INFO: [v++ 60-791] Total elapsed time: 6h 5m 14s

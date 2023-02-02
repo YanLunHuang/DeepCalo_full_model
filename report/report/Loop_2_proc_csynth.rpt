@@ -1,0 +1,212 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_2_proc'
+================================================================
+* Date:           Fri Jan 27 13:51:29 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        alveo_hls4ml
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.100 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       25|       25| 0.100 us | 0.100 us |   25|   25|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |       16|       16|         3|          1|          1|    15|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++---------------------+---------+-------+---------+--------+-----+
+|DSP                  |        -|      -|        -|       -|    -|
+|Expression           |        -|      -|        0|      27|    -|
+|FIFO                 |        -|      -|        -|       -|    -|
+|Instance             |        -|      -|        -|       -|    -|
+|Memory               |        -|      -|        -|       -|    -|
+|Multiplexer          |        -|      -|        -|     131|    -|
+|Register             |        -|      -|      115|       -|    -|
++---------------------+---------+-------+---------+--------+-----+
+|Total                |        0|      0|      115|     158|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available SLR        |     1344|   2976|   871680|  435840|  320|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization SLR (%)  |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available            |     2688|   5952|  1743360|  871680|  640|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization (%)      |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |i_fu_124_p2                        |     +    |      0|  0|   6|           4|           1|
+    |ap_block_state10_pp0_stage0_iter1  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state11_pp0_stage0_iter2  |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln90_fu_118_p2                |   icmp   |      0|  0|   9|           4|           2|
+    |ap_block_pp0_stage0_01001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1                    |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                      |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1            |    xor   |      0|  0|   2|           2|           1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                              |          |      0|  0|  27|          15|          10|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  50|         11|    1|         11|
+    |ap_done                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2  |   9|          2|    1|          2|
+    |i10_0_i_reg_87           |   9|          2|    4|          8|
+    |real_start               |   9|          2|    1|          2|
+    |scalars_V_blk_n_AR       |   9|          2|    1|          2|
+    |scalars_V_blk_n_R        |   9|          2|    1|          2|
+    |scalars_V_offset_blk_n   |   9|          2|    1|          2|
+    |scalars_buf_V_blk_n      |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 131|         29|   13|         35|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------+----+----+-----+-----------+
+    |               Name              | FF | LUT| Bits| Const Bits|
+    +---------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                        |  10|   0|   10|          0|
+    |ap_done_reg                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2          |   1|   0|    1|          0|
+    |i10_0_i_reg_87                   |   4|   0|    4|          0|
+    |icmp_ln90_reg_136                |   1|   0|    1|          0|
+    |icmp_ln90_reg_136_pp0_iter1_reg  |   1|   0|    1|          0|
+    |scalars_V_addr_read_reg_145      |  32|   0|   32|          0|
+    |scalars_V_addr_reg_130           |  62|   0|   64|          2|
+    |start_once_reg                   |   1|   0|    1|          0|
+    +---------------------------------+----+----+-----+-----------+
+    |Total                            | 115|   0|  117|          2|
+    +---------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++--------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                    |  in |    1| ap_ctrl_hs |    Loop_2_proc   | return value |
+|ap_rst                    |  in |    1| ap_ctrl_hs |    Loop_2_proc   | return value |
+|ap_start                  |  in |    1| ap_ctrl_hs |    Loop_2_proc   | return value |
+|start_full_n              |  in |    1| ap_ctrl_hs |    Loop_2_proc   | return value |
+|ap_done                   | out |    1| ap_ctrl_hs |    Loop_2_proc   | return value |
+|ap_continue               |  in |    1| ap_ctrl_hs |    Loop_2_proc   | return value |
+|ap_idle                   | out |    1| ap_ctrl_hs |    Loop_2_proc   | return value |
+|ap_ready                  | out |    1| ap_ctrl_hs |    Loop_2_proc   | return value |
+|start_out                 | out |    1| ap_ctrl_hs |    Loop_2_proc   | return value |
+|start_write               | out |    1| ap_ctrl_hs |    Loop_2_proc   | return value |
+|m_axi_scalars_V_AWVALID   | out |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_AWREADY   |  in |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_AWADDR    | out |   64|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_AWID      | out |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_AWLEN     | out |   32|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_AWSIZE    | out |    3|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_AWBURST   | out |    2|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_AWLOCK    | out |    2|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_AWCACHE   | out |    4|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_AWPROT    | out |    3|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_AWQOS     | out |    4|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_AWREGION  | out |    4|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_AWUSER    | out |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_WVALID    | out |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_WREADY    |  in |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_WDATA     | out |   32|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_WSTRB     | out |    4|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_WLAST     | out |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_WID       | out |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_WUSER     | out |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_ARVALID   | out |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_ARREADY   |  in |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_ARADDR    | out |   64|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_ARID      | out |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_ARLEN     | out |   32|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_ARSIZE    | out |    3|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_ARBURST   | out |    2|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_ARLOCK    | out |    2|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_ARCACHE   | out |    4|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_ARPROT    | out |    3|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_ARQOS     | out |    4|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_ARREGION  | out |    4|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_ARUSER    | out |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_RVALID    |  in |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_RREADY    | out |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_RDATA     |  in |   32|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_RLAST     |  in |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_RID       |  in |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_RUSER     |  in |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_RRESP     |  in |    2|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_BVALID    |  in |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_BREADY    | out |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_BRESP     |  in |    2|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_BID       |  in |    1|    m_axi   |     scalars_V    |    pointer   |
+|m_axi_scalars_V_BUSER     |  in |    1|    m_axi   |     scalars_V    |    pointer   |
+|scalars_V_offset_dout     |  in |   64|   ap_fifo  | scalars_V_offset |    pointer   |
+|scalars_V_offset_empty_n  |  in |    1|   ap_fifo  | scalars_V_offset |    pointer   |
+|scalars_V_offset_read     | out |    1|   ap_fifo  | scalars_V_offset |    pointer   |
+|scalars_buf_V_din         | out |   32|   ap_fifo  |   scalars_buf_V  |    pointer   |
+|scalars_buf_V_full_n      |  in |    1|   ap_fifo  |   scalars_buf_V  |    pointer   |
+|scalars_buf_V_write       | out |    1|   ap_fifo  |   scalars_buf_V  |    pointer   |
++--------------------------+-----+-----+------------+------------------+--------------+
+
