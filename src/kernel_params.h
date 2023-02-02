@@ -9,7 +9,7 @@
 #define em_barrel_STREAM_LEN  (N_INPUT_1_21*N_INPUT_2_21*N_INPUT_3_21)
 //scalars 15
 #define scalars_STREAM_LEN  N_INPUT_1_6
-//tracks 342
+//tracks 456
 #define tracks_STREAM_LEN  (N_INPUT_1_1*N_INPUT_2_1)
 
 //===============
