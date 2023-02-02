@@ -1,0 +1,250 @@
+
+
+================================================================
+== Vivado HLS Report for 'cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s'
+================================================================
+* Date:           Sun Jan 22 20:55:30 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        alveo_hls4ml
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 1.222 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        0|        0|   0 ns   |   0 ns   |    1|    1| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++---------------------+---------+-------+---------+--------+-----+
+|DSP                  |        -|      -|        -|       -|    -|
+|Expression           |        -|      -|        -|       -|    -|
+|FIFO                 |        -|      -|        -|       -|    -|
+|Instance             |        -|      -|        -|       -|    -|
+|Memory               |        0|      -|     8192|    4096|    -|
+|Multiplexer          |        -|      -|        -|       -|    -|
+|Register             |        -|      -|        1|       -|    -|
++---------------------+---------+-------+---------+--------+-----+
+|Total                |        0|      0|     8193|    4096|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available SLR        |     1344|   2976|   871680|  435840|  320|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization SLR (%)  |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available            |     2688|   5952|  1743360|  871680|  640|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization (%)      |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +-------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |             Memory            |                                      Module                                      | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |layer_in_row_Array_V_5_0_0_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_0_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_1_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_1_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_2_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_2_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_3_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_3_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_4_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_4_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_5_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_5_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_6_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_6_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_7_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_7_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_8_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_8_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_9_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_9_U   |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_10_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_10_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_11_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_11_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_12_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_12_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_13_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_13_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_14_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_14_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_15_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_15_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_16_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_16_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_17_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_17_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_18_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_18_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_19_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_19_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_20_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_20_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_21_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_21_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_22_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_22_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_23_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_23_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_24_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_24_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_25_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_25_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_26_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_26_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_27_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_27_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_28_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_28_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_29_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_29_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_30_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_30_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_31_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_31_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_32_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_32_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_33_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_33_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_34_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_34_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_35_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_35_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_36_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_36_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_37_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_37_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_38_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_38_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_39_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_39_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_40_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_40_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_41_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_41_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_42_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_42_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_43_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_43_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_44_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_44_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_45_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_45_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_46_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_46_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_47_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_47_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_48_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_48_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_49_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_49_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_50_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_50_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_51_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_51_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_52_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_52_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_53_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_53_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_54_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_54_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_55_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_55_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_56_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_56_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_57_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_57_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_58_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_58_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_59_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_59_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_60_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_60_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_61_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_61_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_62_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_62_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_0_63_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    |layer_in_row_Array_V_5_1_63_U  |cnnshift_arr_ap_fixed_8_2_5_3_0_ap_fixed_8_2_4_0_0_config59_s_layer_in_row_ArgJb  |        0|  64|  32|    0|     8|    8|     1|           64|
+    +-------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total                          |                                                                                  |        0|8192|4096|    0|  1024| 1024|   128|         8192|
+    +-------------------------------+----------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +-----------+---+----+-----+-----------+
+    |    Name   | FF| LUT| Bits| Const Bits|
+    +-----------+---+----+-----+-----------+
+    |ap_CS_fsm  |  1|   0|    1|          0|
+    +-----------+---+----+-----+-----------+
+    |Total      |  1|   0|    1|          0|
+    +-----------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------+-----+------+------------+--------------------------------------------------------------------------+--------------+
+|   RTL Ports   | Dir | Bits |  Protocol  |                               Source Object                              |    C Type    |
++---------------+-----+------+------------+--------------------------------------------------------------------------+--------------+
+|ap_clk         |  in |     1| ap_ctrl_hs | cnnshift_arr<ap_fixed<8, 2, 5, 3, 0>, ap_fixed<8, 2, 4, 0, 0>, config59> | return value |
+|ap_rst         |  in |     1| ap_ctrl_hs | cnnshift_arr<ap_fixed<8, 2, 5, 3, 0>, ap_fixed<8, 2, 4, 0, 0>, config59> | return value |
+|ap_start       |  in |     1| ap_ctrl_hs | cnnshift_arr<ap_fixed<8, 2, 5, 3, 0>, ap_fixed<8, 2, 4, 0, 0>, config59> | return value |
+|ap_done        | out |     1| ap_ctrl_hs | cnnshift_arr<ap_fixed<8, 2, 5, 3, 0>, ap_fixed<8, 2, 4, 0, 0>, config59> | return value |
+|ap_idle        | out |     1| ap_ctrl_hs | cnnshift_arr<ap_fixed<8, 2, 5, 3, 0>, ap_fixed<8, 2, 4, 0, 0>, config59> | return value |
+|ap_ready       | out |     1| ap_ctrl_hs | cnnshift_arr<ap_fixed<8, 2, 5, 3, 0>, ap_fixed<8, 2, 4, 0, 0>, config59> | return value |
+|ap_return      | out |  4608| ap_ctrl_hs | cnnshift_arr<ap_fixed<8, 2, 5, 3, 0>, ap_fixed<8, 2, 4, 0, 0>, config59> | return value |
+|data_V_read    |  in |   512|   ap_none  |                                data_V_read                               |    scalar    |
+|output_V_read  |  in |  4608|   ap_none  |                               output_V_read                              |    scalar    |
++---------------+-----+------+------------+--------------------------------------------------------------------------+--------------+
+

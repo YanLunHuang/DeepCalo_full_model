@@ -1,0 +1,24 @@
+Processing event 0
+FPGA time: 1190739 ns 
+kernel time: 988585 ns 
+Predictions:  
+144.262 
+Quantized predictions: 
+312.668 
+
+Processing event 1
+FPGA time: 1034663 ns 
+kernel time: 922410 ns 
+Predictions:  
+144.262 
+Quantized predictions: 
+312.668 
+
+Processing event 2
+FPGA time: 1015066 ns 
+kernel time: 917631 ns 
+Predictions:  
+144.262 
+Quantized predictions: 
+312.668 
+
