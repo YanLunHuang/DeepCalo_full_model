@@ -15,14 +15,14 @@ XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u50_xdma_201920_1/alv
 ## Latency
 ```bash
 Test 10,000 times and calculate the average.
-Total time : 1.26ms
-Kernel time : 1.16ms
+Total time : 1.69ms
+Kernel time : 1.57ms
 ```
 ## Some detail
 ```bash
 The pooling layer & dense_ss are the final version.
 (It has the best performance and routing result.)
-The slack in the model is equal to zero or pisitive, so the clock period can run on 5ns precisely.
+The slack in the model is unideal, so the conclusion is applying DSP for multiplication is a better way.
 
 In order to reduce the BRAM usage, I set the precision to 8 bits.
 The reuse factors in all convolution layers are the same as the ones Dylan used.
