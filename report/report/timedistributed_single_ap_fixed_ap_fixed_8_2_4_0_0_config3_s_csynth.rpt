@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vivado HLS Report for 'timedistributed_single_ap_fixed_ap_fixed_8_2_4_0_0_config3_s'
+================================================================
+* Date:           Sat Jan 21 03:32:23 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        alveo_hls4ml
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.040 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    39528|    39528| 0.158 ms | 0.158 ms |  39528|  39528|   none  |
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------+------------------+---------+---------+----------+----------+-----+-----+----------+
+        |                     |                  |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+        |       Instance      |      Module      |   min   |   max   |    min   |    max   | min | max |   Type   |
+        +---------------------+------------------+---------+---------+----------+----------+-----+-----+----------+
+        |dataflow_in_loop_U0  |dataflow_in_loop  |      526|      526| 2.104 us | 2.104 us |  520|  520| dataflow |
+        +---------------------+------------------+---------+---------+----------+----------+-----+-----+----------+
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    39527|    39527|       528|          -|          -|    76|    no    |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++---------------------+---------+-------+---------+--------+-----+
+|DSP                  |        -|      -|        -|       -|    -|
+|Expression           |        -|      -|        0|      21|    -|
+|FIFO                 |        -|      -|        -|       -|    -|
+|Instance             |       61|      0|     9538|   28870|    0|
+|Memory               |        -|      -|        -|       -|    -|
+|Multiplexer          |        -|      -|        -|      27|    -|
+|Register             |        -|      -|       15|       -|    -|
++---------------------+---------+-------+---------+--------+-----+
+|Total                |       61|      0|     9553|   28918|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available SLR        |     1344|   2976|   871680|  435840|  320|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization SLR (%)  |        4|      0|        1|       6|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available            |     2688|   5952|  1743360|  871680|  640|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization (%)      |        2|      0|    ~0   |       3|    0|
++---------------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------+------------------+---------+-------+------+-------+-----+
+    |       Instance      |      Module      | BRAM_18K| DSP48E|  FF  |  LUT  | URAM|
+    +---------------------+------------------+---------+-------+------+-------+-----+
+    |dataflow_in_loop_U0  |dataflow_in_loop  |       61|      0|  9538|  28870|    0|
+    +---------------------+------------------+---------+-------+------+-------+-----+
+    |Total                |                  |       61|      0|  9538|  28870|    0|
+    +---------------------+------------------+---------+-------+------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------+----------+-------+---+----+------------+------------+
+    |        Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------+----------+-------+---+----+------------+------------+
+    |loop_dataflow_input_count   |     +    |      0|  0|   7|           7|           1|
+    |loop_dataflow_output_count  |     +    |      0|  0|   7|           7|           1|
+    |bound_minus_1               |     -    |      0|  0|   7|           7|           1|
+    +----------------------------+----------+-------+---+----+------------+------------+
+    |Total                       |          |      0|  0|  21|          21|           3|
+    +----------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |loop_dataflow_input_count   |   9|          2|    7|         14|
+    |loop_dataflow_output_count  |   9|          2|    7|         14|
+    |real_start                  |   9|          2|    1|          2|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       |  27|          6|   15|         30|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------+---+----+-----+-----------+
+    |            Name            | FF| LUT| Bits| Const Bits|
+    +----------------------------+---+----+-----+-----------+
+    |loop_dataflow_input_count   |  7|   0|    7|          0|
+    |loop_dataflow_output_count  |  7|   0|    7|          0|
+    |start_once_reg              |  1|   0|    1|          0|
+    +----------------------------+---+----+-----+-----------+
+    |Total                       | 15|   0|   15|          0|
+    +----------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+--------------------------------------------------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |                         Source Object                        |    C Type    |
++------------------+-----+-----+------------+--------------------------------------------------------------+--------------+
+|ap_start          |  in |    1| ap_ctrl_hs | timedistributed_single<ap_fixed,ap_fixed<8,2,4,0,0>,config3> | return value |
+|start_full_n      |  in |    1| ap_ctrl_hs | timedistributed_single<ap_fixed,ap_fixed<8,2,4,0,0>,config3> | return value |
+|start_out         | out |    1| ap_ctrl_hs | timedistributed_single<ap_fixed,ap_fixed<8,2,4,0,0>,config3> | return value |
+|start_write       | out |    1| ap_ctrl_hs | timedistributed_single<ap_fixed,ap_fixed<8,2,4,0,0>,config3> | return value |
+|ap_clk            |  in |    1| ap_ctrl_hs | timedistributed_single<ap_fixed,ap_fixed<8,2,4,0,0>,config3> | return value |
+|ap_rst            |  in |    1| ap_ctrl_hs | timedistributed_single<ap_fixed,ap_fixed<8,2,4,0,0>,config3> | return value |
+|ap_done           | out |    1| ap_ctrl_hs | timedistributed_single<ap_fixed,ap_fixed<8,2,4,0,0>,config3> | return value |
+|ap_ready          | out |    1| ap_ctrl_hs | timedistributed_single<ap_fixed,ap_fixed<8,2,4,0,0>,config3> | return value |
+|ap_idle           | out |    1| ap_ctrl_hs | timedistributed_single<ap_fixed,ap_fixed<8,2,4,0,0>,config3> | return value |
+|ap_continue       |  in |    1| ap_ctrl_hs | timedistributed_single<ap_fixed,ap_fixed<8,2,4,0,0>,config3> | return value |
+|data_V_V_dout     |  in |    8|   ap_fifo  |                           data_V_V                           |    pointer   |
+|data_V_V_empty_n  |  in |    1|   ap_fifo  |                           data_V_V                           |    pointer   |
+|data_V_V_read     | out |    1|   ap_fifo  |                           data_V_V                           |    pointer   |
+|res_V_V_din       | out |    8|   ap_fifo  |                            res_V_V                           |    pointer   |
+|res_V_V_full_n    |  in |    1|   ap_fifo  |                            res_V_V                           |    pointer   |
+|res_V_V_write     | out |    1|   ap_fifo  |                            res_V_V                           |    pointer   |
++------------------+-----+-----+------------+--------------------------------------------------------------+--------------+
+
