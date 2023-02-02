@@ -12,11 +12,18 @@ XCL_EMULATION_MODE=sw_emu ./host ./build_dir.sw_emu.xilinx_u50_xdma_201920_1/alv
 XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u50_xdma_201920_1/alveo_hls4ml.xclbin  # hardware emulation
 ./host alveo_hls4ml.xclbin  # run on U50
 ```
+## Latency
+```bash
+Test 10,000 times and calculate the average.
+Total time : 1.69ms
+Kernel time : 1.57ms
+```
 ## Some detail
 ```bash
-This version copies all layers in image-only model.
-link: https://github.com/YanLunHuang/alveo_u50_sucess/tree/8_24_pooling_again
+The pooling layer & dense_ss are the final version.
+(It has the best performance and routing result.)
+The slack in the model is very unideal, so the conclusion is applying DSP for multiplication is a better way.
 
-I set the precision to ap_fixed<16,6>, and the BRAM part does not increase a lot compared to ap_fixed<10,6>.
-The reuse factors in all convolution layers are equal to n_in.
+In order to reduce the BRAM usage, I set the precision to 8 bits.
+The reuse factors in all convolution layers are the same as the ones Dylan used.
 ```
