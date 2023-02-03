@@ -14,9 +14,10 @@ XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u50_xdma_201920_1/alv
 ```
 ## Latency
 ```bash
+Send 5 sets of input one time
 Test 10,000 times and calculate the average.
-Total time : 1.26ms
-Kernel time : 1.16ms
+Total time : 0.700ms
+Kernel time : 0.676ms
 ```
 ## Some detail
 ```bash
