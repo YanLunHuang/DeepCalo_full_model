@@ -1,0 +1,188 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_entry_proc_proc908'
+================================================================
+* Date:           Fri Feb  3 03:05:49 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        alveo_hls4ml
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.100 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        7|        7| 28.000 ns | 28.000 ns |    7|    7|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++---------------------+---------+-------+---------+--------+-----+
+|DSP                  |        -|      -|        -|       -|    -|
+|Expression           |        -|      -|        0|      65|    -|
+|FIFO                 |        -|      -|        -|       -|    -|
+|Instance             |        -|      -|        -|       -|    -|
+|Memory               |        -|      -|        -|       -|    -|
+|Multiplexer          |        -|      -|        -|      98|    -|
+|Register             |        -|      -|       72|       -|    -|
++---------------------+---------+-------+---------+--------+-----+
+|Total                |        0|      0|       72|     163|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available SLR        |     1344|   2976|   871680|  435840|  320|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization SLR (%)  |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available            |     2688|   5952|  1743360|  871680|  640|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization (%)      |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |add_ln203_fu_89_p2  |     +    |      0|  0|  63|          63|          63|
+    |ap_block_state1     |    or    |      0|  0|   2|           1|           1|
+    +--------------------+----------+-------+---+----+------------+------------+
+    |Total               |          |      0|  0|  65|          64|          64|
+    +--------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm           |  44|          9|    1|          9|
+    |ap_done             |   9|          2|    1|          2|
+    |k_0_i_c3_blk_n      |   9|          2|    1|          2|
+    |out_V_blk_n_AW      |   9|          2|    1|          2|
+    |out_V_blk_n_B       |   9|          2|    1|          2|
+    |out_V_blk_n_W       |   9|          2|    1|          2|
+    |out_V_offset_blk_n  |   9|          2|    1|          2|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               |  98|         21|    7|         21|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------+----+----+-----+-----------+
+    |        Name        | FF | LUT| Bits| Const Bits|
+    +--------------------+----+----+-----+-----------+
+    |ap_CS_fsm           |   8|   0|    8|          0|
+    |ap_done_reg         |   1|   0|    1|          0|
+    |out_V_addr_reg_105  |  63|   0|   64|          1|
+    +--------------------+----+----+-----+-----------+
+    |Total               |  72|   0|   73|          1|
+    +--------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+--------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
++----------------------+-----+-----+------------+--------------------------+--------------+
+|ap_clk                |  in |    1| ap_ctrl_hs | Block_entry_proc_proc908 | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs | Block_entry_proc_proc908 | return value |
+|ap_start              |  in |    1| ap_ctrl_hs | Block_entry_proc_proc908 | return value |
+|ap_done               | out |    1| ap_ctrl_hs | Block_entry_proc_proc908 | return value |
+|ap_continue           |  in |    1| ap_ctrl_hs | Block_entry_proc_proc908 | return value |
+|ap_idle               | out |    1| ap_ctrl_hs | Block_entry_proc_proc908 | return value |
+|ap_ready              | out |    1| ap_ctrl_hs | Block_entry_proc_proc908 | return value |
+|tmp_V                 |  in |   32|   ap_none  |           tmp_V          |    pointer   |
+|m_axi_out_V_AWVALID   | out |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_AWREADY   |  in |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_AWADDR    | out |   64|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_AWID      | out |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_AWLEN     | out |   32|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_AWSIZE    | out |    3|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_AWBURST   | out |    2|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_AWLOCK    | out |    2|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_AWCACHE   | out |    4|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_AWPROT    | out |    3|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_AWQOS     | out |    4|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_AWREGION  | out |    4|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_AWUSER    | out |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_WVALID    | out |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_WREADY    |  in |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_WDATA     | out |   32|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_WSTRB     | out |    4|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_WLAST     | out |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_WID       | out |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_WUSER     | out |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_ARVALID   | out |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_ARREADY   |  in |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_ARADDR    | out |   64|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_ARID      | out |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_ARLEN     | out |   32|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_ARSIZE    | out |    3|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_ARBURST   | out |    2|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_ARLOCK    | out |    2|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_ARCACHE   | out |    4|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_ARPROT    | out |    3|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_ARQOS     | out |    4|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_ARREGION  | out |    4|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_ARUSER    | out |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_RVALID    |  in |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_RREADY    | out |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_RDATA     |  in |   32|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_RLAST     |  in |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_RID       |  in |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_RUSER     |  in |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_RRESP     |  in |    2|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_BVALID    |  in |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_BREADY    | out |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_BRESP     |  in |    2|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_BID       |  in |    1|    m_axi   |           out_V          |    pointer   |
+|m_axi_out_V_BUSER     |  in |    1|    m_axi   |           out_V          |    pointer   |
+|out_V_offset_dout     |  in |   62|   ap_fifo  |       out_V_offset       |    pointer   |
+|out_V_offset_empty_n  |  in |    1|   ap_fifo  |       out_V_offset       |    pointer   |
+|out_V_offset_read     | out |    1|   ap_fifo  |       out_V_offset       |    pointer   |
+|k_0_i_c3_dout         |  in |    3|   ap_fifo  |         k_0_i_c3         |    pointer   |
+|k_0_i_c3_empty_n      |  in |    1|   ap_fifo  |         k_0_i_c3         |    pointer   |
+|k_0_i_c3_read         | out |    1|   ap_fifo  |         k_0_i_c3         |    pointer   |
++----------------------+-----+-----+------------+--------------------------+--------------+
+

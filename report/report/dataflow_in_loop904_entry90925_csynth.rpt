@@ -1,0 +1,165 @@
+
+
+================================================================
+== Vivado HLS Report for 'dataflow_in_loop904_entry90925'
+================================================================
+* Date:           Fri Feb  3 01:26:14 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        alveo_hls4ml
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 1.458 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|   0 ns   |   0 ns   |    0|    0|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++---------------------+---------+-------+---------+--------+-----+
+|DSP                  |        -|      -|        -|       -|    -|
+|Expression           |        -|      -|        0|       2|    -|
+|FIFO                 |        -|      -|        -|       -|    -|
+|Instance             |        -|      -|        -|       -|    -|
+|Memory               |        -|      -|        -|       -|    -|
+|Multiplexer          |        -|      -|        -|      81|    -|
+|Register             |        -|      -|        2|       -|    -|
++---------------------+---------+-------+---------+--------+-----+
+|Total                |        0|      0|        2|      83|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available SLR        |     1344|   2976|   871680|  435840|  320|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization SLR (%)  |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available            |     2688|   5952|  1743360|  871680|  640|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization (%)      |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+-------+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1  |    or    |      0|  0|   2|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |Total            |          |      0|  0|   2|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------+----+-----------+-----+-----------+
+    |             Name             | LUT| Input Size| Bits| Total Bits|
+    +------------------------------+----+-----------+-----+-----------+
+    |ap_done                       |   9|          2|    1|          2|
+    |em_barrel_V_offset_out_blk_n  |   9|          2|    1|          2|
+    |k_0_i_out1_blk_n              |   9|          2|    1|          2|
+    |k_0_i_out2_blk_n              |   9|          2|    1|          2|
+    |k_0_i_out3_blk_n              |   9|          2|    1|          2|
+    |k_0_i_out_blk_n               |   9|          2|    1|          2|
+    |out_V_offset_out_blk_n        |   9|          2|    1|          2|
+    |scalars_V_offset_out_blk_n    |   9|          2|    1|          2|
+    |tracks_V_offset_out_blk_n     |   9|          2|    1|          2|
+    +------------------------------+----+-----------+-----+-----------+
+    |Total                         |  81|         18|    9|         18|
+    +------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  2|   0|    2|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+--------------------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++-------------------------------+-----+-----+------------+--------------------------------+--------------+
+|ap_clk                         |  in |    1| ap_ctrl_hs | dataflow_in_loop904.entry90925 | return value |
+|ap_rst                         |  in |    1| ap_ctrl_hs | dataflow_in_loop904.entry90925 | return value |
+|ap_start                       |  in |    1| ap_ctrl_hs | dataflow_in_loop904.entry90925 | return value |
+|ap_done                        | out |    1| ap_ctrl_hs | dataflow_in_loop904.entry90925 | return value |
+|ap_continue                    |  in |    1| ap_ctrl_hs | dataflow_in_loop904.entry90925 | return value |
+|ap_idle                        | out |    1| ap_ctrl_hs | dataflow_in_loop904.entry90925 | return value |
+|ap_ready                       | out |    1| ap_ctrl_hs | dataflow_in_loop904.entry90925 | return value |
+|k_0_i                          |  in |    3|   ap_none  |              k_0_i             |    scalar    |
+|k_0_i_out_din                  | out |    3|   ap_fifo  |            k_0_i_out           |    pointer   |
+|k_0_i_out_full_n               |  in |    1|   ap_fifo  |            k_0_i_out           |    pointer   |
+|k_0_i_out_write                | out |    1|   ap_fifo  |            k_0_i_out           |    pointer   |
+|k_0_i_out1_din                 | out |    3|   ap_fifo  |           k_0_i_out1           |    pointer   |
+|k_0_i_out1_full_n              |  in |    1|   ap_fifo  |           k_0_i_out1           |    pointer   |
+|k_0_i_out1_write               | out |    1|   ap_fifo  |           k_0_i_out1           |    pointer   |
+|k_0_i_out2_din                 | out |    3|   ap_fifo  |           k_0_i_out2           |    pointer   |
+|k_0_i_out2_full_n              |  in |    1|   ap_fifo  |           k_0_i_out2           |    pointer   |
+|k_0_i_out2_write               | out |    1|   ap_fifo  |           k_0_i_out2           |    pointer   |
+|k_0_i_out3_din                 | out |    3|   ap_fifo  |           k_0_i_out3           |    pointer   |
+|k_0_i_out3_full_n              |  in |    1|   ap_fifo  |           k_0_i_out3           |    pointer   |
+|k_0_i_out3_write               | out |    1|   ap_fifo  |           k_0_i_out3           |    pointer   |
+|em_barrel_V_offset             |  in |   62|   ap_none  |       em_barrel_V_offset       |    scalar    |
+|scalars_V_offset               |  in |   62|   ap_none  |        scalars_V_offset        |    scalar    |
+|tracks_V_offset                |  in |   62|   ap_none  |         tracks_V_offset        |    scalar    |
+|out_V_offset                   |  in |   62|   ap_none  |          out_V_offset          |    scalar    |
+|em_barrel_V_offset_out_din     | out |   62|   ap_fifo  |     em_barrel_V_offset_out     |    pointer   |
+|em_barrel_V_offset_out_full_n  |  in |    1|   ap_fifo  |     em_barrel_V_offset_out     |    pointer   |
+|em_barrel_V_offset_out_write   | out |    1|   ap_fifo  |     em_barrel_V_offset_out     |    pointer   |
+|scalars_V_offset_out_din       | out |   62|   ap_fifo  |      scalars_V_offset_out      |    pointer   |
+|scalars_V_offset_out_full_n    |  in |    1|   ap_fifo  |      scalars_V_offset_out      |    pointer   |
+|scalars_V_offset_out_write     | out |    1|   ap_fifo  |      scalars_V_offset_out      |    pointer   |
+|tracks_V_offset_out_din        | out |   62|   ap_fifo  |       tracks_V_offset_out      |    pointer   |
+|tracks_V_offset_out_full_n     |  in |    1|   ap_fifo  |       tracks_V_offset_out      |    pointer   |
+|tracks_V_offset_out_write      | out |    1|   ap_fifo  |       tracks_V_offset_out      |    pointer   |
+|out_V_offset_out_din           | out |   62|   ap_fifo  |        out_V_offset_out        |    pointer   |
+|out_V_offset_out_full_n        |  in |    1|   ap_fifo  |        out_V_offset_out        |    pointer   |
+|out_V_offset_out_write         | out |    1|   ap_fifo  |        out_V_offset_out        |    pointer   |
++-------------------------------+-----+-----+------------+--------------------------------+--------------+
+
