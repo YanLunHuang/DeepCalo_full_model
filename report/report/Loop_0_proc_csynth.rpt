@@ -1,0 +1,255 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_0_proc'
+================================================================
+* Date:           Fri Feb  3 02:21:53 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        alveo_hls4ml
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 3.100 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+------+------+---------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
+    |   min   |   max   |    min   |    max   |  min |  max |   Type  |
+    +---------+---------+----------+----------+------+------+---------+
+    |     2475|     2475| 9.900 us | 9.900 us |  2475|  2475|   none  |
+    +---------+---------+----------+----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |     2472|     2472|        13|          4|          1|   616|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++---------------------+---------+-------+---------+--------+-----+
+|DSP                  |        -|      -|        -|       -|    -|
+|Expression           |        -|      0|        0|     420|    -|
+|FIFO                 |        -|      -|        -|       -|    -|
+|Instance             |        -|      -|        -|       -|    -|
+|Memory               |        -|      -|        -|       -|    -|
+|Multiplexer          |        -|      -|        -|     140|    -|
+|Register             |        0|      -|      699|      64|    -|
++---------------------+---------+-------+---------+--------+-----+
+|Total                |        0|      0|      699|     624|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available SLR        |     1344|   2976|   871680|  435840|  320|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization SLR (%)  |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available            |     2688|   5952|  1743360|  871680|  640|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization (%)      |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |mul_ln203_fu_205_p2                |     *    |      0|  0|  62|           3|          10|
+    |add_ln203_3_fu_266_p2              |     +    |      0|  0|  15|          15|           1|
+    |add_ln203_4_fu_276_p2              |     +    |      0|  0|  63|          63|          63|
+    |add_ln203_5_fu_291_p2              |     +    |      0|  0|  15|          15|           2|
+    |add_ln203_6_fu_301_p2              |     +    |      0|  0|  63|          63|          63|
+    |add_ln203_7_fu_316_p2              |     +    |      0|  0|  15|          15|           2|
+    |add_ln203_8_fu_326_p2              |     +    |      0|  0|  63|          63|          63|
+    |add_ln203_fu_247_p2                |     +    |      0|  0|  63|          63|          63|
+    |add_ln88_fu_227_p2                 |     +    |      0|  0|  12|          12|          12|
+    |i_fu_217_p2                        |     +    |      0|  0|  10|          10|           1|
+    |ap_block_state11_pp0_stage0_iter2  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state12_pp0_stage1_iter2  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state4_io                 |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_341                   |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_357                   |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_359                   |    and   |      0|  0|   2|           1|           1|
+    |ap_condition_362                   |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln84_fu_211_p2                |   icmp   |      0|  0|  13|          10|          10|
+    |ap_block_pp0_stage0_11001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage1_11001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage2_11001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage3_11001          |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1                    |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                      |    xor   |      0|  0|   2|           1|           2|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                              |          |      0|  0| 420|         345|         304|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                               |  41|          8|    1|          8|
+    |ap_done                                 |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter3                 |   9|          2|    1|          2|
+    |ap_phi_mux_i_0_i_i_i_i_i_phi_fu_194_p4  |   9|          2|   10|         20|
+    |em_barrel_layer_V_blk_n_AR              |   9|          2|    1|          2|
+    |em_barrel_layer_V_blk_n_R               |   9|          2|    1|          2|
+    |em_barrel_layer_V_offset_blk_n          |   9|          2|    1|          2|
+    |i_0_i_i_i_i_i_reg_190                   |   9|          2|   10|         20|
+    |k_0_i_c_blk_n                           |   9|          2|    1|          2|
+    |m_axi_em_barrel_layer_V_ARADDR          |  27|          5|   64|        320|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   | 140|         29|   91|        380|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------+----+----+-----+-----------+
+    |                  Name                 | FF | LUT| Bits| Const Bits|
+    +---------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                              |   7|   0|    7|          0|
+    |ap_done_reg                            |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                |   1|   0|    1|          0|
+    |em_barrel_layer_V_addr_1_read_reg_418  |  32|   0|   32|          0|
+    |em_barrel_layer_V_addr_1_reg_388       |  63|   0|   64|          1|
+    |em_barrel_layer_V_addr_2_read_reg_423  |  32|   0|   32|          0|
+    |em_barrel_layer_V_addr_2_reg_394       |  63|   0|   64|          1|
+    |em_barrel_layer_V_addr_3_read_reg_428  |  32|   0|   32|          0|
+    |em_barrel_layer_V_addr_3_reg_400       |  63|   0|   64|          1|
+    |em_barrel_layer_V_addr_read_reg_406    |  32|   0|   32|          0|
+    |em_barrel_layer_V_addr_reg_382         |  63|   0|   64|          1|
+    |em_barrel_layer_V_offset_read_reg_346  |  62|   0|   62|          0|
+    |i_0_i_i_i_i_i_reg_190                  |  10|   0|   10|          0|
+    |i_reg_365                              |  10|   0|   10|          0|
+    |icmp_ln84_reg_361                      |   1|   0|    1|          0|
+    |k_0_i_c_read_reg_351                   |   3|   0|    3|          0|
+    |mul_ln203_reg_356                      |   9|   0|   12|          3|
+    |tmp_i_i_reg_370                        |  12|   0|   14|          2|
+    |zext_ln203_16_reg_375                  |  62|   0|   63|          1|
+    |zext_ln88_reg_411                      |  10|   0|   64|         54|
+    |i_0_i_i_i_i_i_reg_190                  |  64|  32|   10|          0|
+    |icmp_ln84_reg_361                      |  64|  32|    1|          0|
+    +---------------------------------------+----+----+-----+-----------+
+    |Total                                  | 699|  64|  646|         64|
+    +---------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+--------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
++----------------------------------+-----+-----+------------+--------------------------+--------------+
+|ap_clk                            |  in |    1| ap_ctrl_hs |        Loop_0_proc       | return value |
+|ap_rst                            |  in |    1| ap_ctrl_hs |        Loop_0_proc       | return value |
+|ap_start                          |  in |    1| ap_ctrl_hs |        Loop_0_proc       | return value |
+|ap_done                           | out |    1| ap_ctrl_hs |        Loop_0_proc       | return value |
+|ap_continue                       |  in |    1| ap_ctrl_hs |        Loop_0_proc       | return value |
+|ap_idle                           | out |    1| ap_ctrl_hs |        Loop_0_proc       | return value |
+|ap_ready                          | out |    1| ap_ctrl_hs |        Loop_0_proc       | return value |
+|k_0_i_c_dout                      |  in |    3|   ap_fifo  |          k_0_i_c         |    pointer   |
+|k_0_i_c_empty_n                   |  in |    1|   ap_fifo  |          k_0_i_c         |    pointer   |
+|k_0_i_c_read                      | out |    1|   ap_fifo  |          k_0_i_c         |    pointer   |
+|m_axi_em_barrel_layer_V_AWVALID   | out |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_AWREADY   |  in |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_AWADDR    | out |   64|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_AWID      | out |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_AWLEN     | out |   32|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_AWSIZE    | out |    3|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_AWBURST   | out |    2|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_AWLOCK    | out |    2|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_AWCACHE   | out |    4|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_AWPROT    | out |    3|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_AWQOS     | out |    4|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_AWREGION  | out |    4|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_AWUSER    | out |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_WVALID    | out |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_WREADY    |  in |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_WDATA     | out |   32|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_WSTRB     | out |    4|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_WLAST     | out |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_WID       | out |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_WUSER     | out |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_ARVALID   | out |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_ARREADY   |  in |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_ARADDR    | out |   64|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_ARID      | out |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_ARLEN     | out |   32|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_ARSIZE    | out |    3|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_ARBURST   | out |    2|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_ARLOCK    | out |    2|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_ARCACHE   | out |    4|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_ARPROT    | out |    3|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_ARQOS     | out |    4|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_ARREGION  | out |    4|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_ARUSER    | out |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_RVALID    |  in |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_RREADY    | out |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_RDATA     |  in |   32|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_RLAST     |  in |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_RID       |  in |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_RUSER     |  in |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_RRESP     |  in |    2|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_BVALID    |  in |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_BREADY    | out |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_BRESP     |  in |    2|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_BID       |  in |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|m_axi_em_barrel_layer_V_BUSER     |  in |    1|    m_axi   |     em_barrel_layer_V    |    pointer   |
+|em_barrel_layer_V_offset_dout     |  in |   62|   ap_fifo  | em_barrel_layer_V_offset |    pointer   |
+|em_barrel_layer_V_offset_empty_n  |  in |    1|   ap_fifo  | em_barrel_layer_V_offset |    pointer   |
+|em_barrel_layer_V_offset_read     | out |    1|   ap_fifo  | em_barrel_layer_V_offset |    pointer   |
+|em_barrel_buf_0_V_address0        | out |   10|  ap_memory |     em_barrel_buf_0_V    |     array    |
+|em_barrel_buf_0_V_ce0             | out |    1|  ap_memory |     em_barrel_buf_0_V    |     array    |
+|em_barrel_buf_0_V_we0             | out |    1|  ap_memory |     em_barrel_buf_0_V    |     array    |
+|em_barrel_buf_0_V_d0              | out |   32|  ap_memory |     em_barrel_buf_0_V    |     array    |
+|em_barrel_buf_1_V_address0        | out |   10|  ap_memory |     em_barrel_buf_1_V    |     array    |
+|em_barrel_buf_1_V_ce0             | out |    1|  ap_memory |     em_barrel_buf_1_V    |     array    |
+|em_barrel_buf_1_V_we0             | out |    1|  ap_memory |     em_barrel_buf_1_V    |     array    |
+|em_barrel_buf_1_V_d0              | out |   32|  ap_memory |     em_barrel_buf_1_V    |     array    |
+|em_barrel_buf_2_V_address0        | out |   10|  ap_memory |     em_barrel_buf_2_V    |     array    |
+|em_barrel_buf_2_V_ce0             | out |    1|  ap_memory |     em_barrel_buf_2_V    |     array    |
+|em_barrel_buf_2_V_we0             | out |    1|  ap_memory |     em_barrel_buf_2_V    |     array    |
+|em_barrel_buf_2_V_d0              | out |   32|  ap_memory |     em_barrel_buf_2_V    |     array    |
+|em_barrel_buf_3_V_address0        | out |   10|  ap_memory |     em_barrel_buf_3_V    |     array    |
+|em_barrel_buf_3_V_ce0             | out |    1|  ap_memory |     em_barrel_buf_3_V    |     array    |
+|em_barrel_buf_3_V_we0             | out |    1|  ap_memory |     em_barrel_buf_3_V    |     array    |
+|em_barrel_buf_3_V_d0              | out |   32|  ap_memory |     em_barrel_buf_3_V    |     array    |
++----------------------------------+-----+-----+------------+--------------------------+--------------+
+

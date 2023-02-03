@@ -1,0 +1,227 @@
+
+
+================================================================
+== Vivado HLS Report for 'resize_nearest_switch_ap_fixed_8_2_5_3_0_config26_s'
+================================================================
+* Date:           Fri Feb  3 02:37:54 2023
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        alveo_hls4ml
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 4.00 ns | 2.916 ns |   0.90 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     3082|     3082| 12.328 us | 12.328 us |  3082|  3082|   none  |
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- ImageHeight  |     3080|     3080|        56|         55|         55|    56|    yes   |
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  | URAM|
++---------------------+---------+-------+---------+--------+-----+
+|DSP                  |        -|      -|        -|       -|    -|
+|Expression           |        -|      -|        0|      31|    -|
+|FIFO                 |        -|      -|        -|       -|    -|
+|Instance             |        -|      -|        -|       -|    -|
+|Memory               |        -|      -|        -|       -|    -|
+|Multiplexer          |        -|      -|        -|     566|    -|
+|Register             |        -|      -|      362|       -|    -|
++---------------------+---------+-------+---------+--------+-----+
+|Total                |        0|      0|      362|     597|    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available SLR        |     1344|   2976|   871680|  435840|  320|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization SLR (%)  |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+|Available            |     2688|   5952|  1743360|  871680|  640|
++---------------------+---------+-------+---------+--------+-----+
+|Utilization (%)      |        0|      0|    ~0   |   ~0   |    0|
++---------------------+---------+-------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------+----------+-------+---+----+------------+------------+
+    |            Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------+----------+-------+---+----+------------+------------+
+    |h_fu_171_p2                         |     +    |      0|  0|   6|           6|           1|
+    |ap_block_pp0_stage0_01001           |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage10_01001          |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage12_01001          |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln166_fu_165_p2                |   icmp   |      0|  0|  11|           6|           5|
+    |ap_block_state1                     |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state10_pp0_stage8_iter0   |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state14_pp0_stage12_iter0  |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                       |    xor   |      0|  0|   2|           1|           2|
+    +------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                               |          |      0|  0|  31|          19|          14|
+    +------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------+-----+-----------+-----+-----------+
+    |              Name              | LUT | Input Size| Bits| Total Bits|
+    +--------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                       |  249|         58|    1|         58|
+    |ap_done                         |    9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1         |    9|          2|    1|          2|
+    |ap_phi_mux_h_0_i_phi_fu_118_p4  |    9|          2|    6|         12|
+    |h_0_i_reg_114                   |    9|          2|    6|         12|
+    |image_0_V_V_blk_n               |    9|          2|    1|          2|
+    |image_1_V_V_blk_n               |    9|          2|    1|          2|
+    |image_2_V_V_blk_n               |    9|          2|    1|          2|
+    |image_3_V_V_blk_n               |    9|          2|    1|          2|
+    |real_start                      |    9|          2|    1|          2|
+    |resized_0_V_V_blk_n             |    9|          2|    1|          2|
+    |resized_0_V_V_din               |   50|         11|    8|         88|
+    |resized_1_V_V_blk_n             |    9|          2|    1|          2|
+    |resized_1_V_V_din               |   50|         11|    8|         88|
+    |resized_2_V_V_blk_n             |    9|          2|    1|          2|
+    |resized_2_V_V_din               |   50|         11|    8|         88|
+    |resized_3_V_V_blk_n             |    9|          2|    1|          2|
+    |resized_3_V_V_din               |   50|         11|    8|         88|
+    +--------------------------------+-----+-----------+-----+-----------+
+    |Total                           |  566|        128|   56|        456|
+    +--------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |  57|   0|   57|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |h_0_i_reg_114            |   6|   0|    6|          0|
+    |h_reg_181                |   6|   0|    6|          0|
+    |icmp_ln166_reg_177       |   1|   0|    1|          0|
+    |reg_125                  |   8|   0|    8|          0|
+    |reg_130                  |   8|   0|    8|          0|
+    |reg_135                  |   8|   0|    8|          0|
+    |reg_140                  |   8|   0|    8|          0|
+    |reg_145                  |   8|   0|    8|          0|
+    |reg_150                  |   8|   0|    8|          0|
+    |reg_155                  |   8|   0|    8|          0|
+    |reg_160                  |   8|   0|    8|          0|
+    |start_once_reg           |   1|   0|    1|          0|
+    |tmp_V_101_reg_226        |   8|   0|    8|          0|
+    |tmp_V_102_reg_231        |   8|   0|    8|          0|
+    |tmp_V_103_reg_236        |   8|   0|    8|          0|
+    |tmp_V_104_reg_241        |   8|   0|    8|          0|
+    |tmp_V_105_reg_246        |   8|   0|    8|          0|
+    |tmp_V_106_reg_251        |   8|   0|    8|          0|
+    |tmp_V_107_reg_256        |   8|   0|    8|          0|
+    |tmp_V_108_reg_261        |   8|   0|    8|          0|
+    |tmp_V_109_reg_266        |   8|   0|    8|          0|
+    |tmp_V_110_reg_271        |   8|   0|    8|          0|
+    |tmp_V_111_reg_276        |   8|   0|    8|          0|
+    |tmp_V_112_reg_281        |   8|   0|    8|          0|
+    |tmp_V_113_reg_286        |   8|   0|    8|          0|
+    |tmp_V_114_reg_291        |   8|   0|    8|          0|
+    |tmp_V_115_reg_296        |   8|   0|    8|          0|
+    |tmp_V_116_reg_301        |   8|   0|    8|          0|
+    |tmp_V_121_reg_306        |   8|   0|    8|          0|
+    |tmp_V_122_reg_311        |   8|   0|    8|          0|
+    |tmp_V_123_reg_316        |   8|   0|    8|          0|
+    |tmp_V_124_reg_321        |   8|   0|    8|          0|
+    |tmp_V_89_reg_186         |   8|   0|    8|          0|
+    |tmp_V_90_reg_191         |   8|   0|    8|          0|
+    |tmp_V_91_reg_196         |   8|   0|    8|          0|
+    |tmp_V_92_reg_201         |   8|   0|    8|          0|
+    |tmp_V_93_reg_206         |   8|   0|    8|          0|
+    |tmp_V_94_reg_211         |   8|   0|    8|          0|
+    |tmp_V_95_reg_216         |   8|   0|    8|          0|
+    |tmp_V_96_reg_221         |   8|   0|    8|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 362|   0|  362|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+----------------------------------------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |                       Source Object                      |    C Type    |
++----------------------+-----+-----+------------+----------------------------------------------------------+--------------+
+|ap_clk                |  in |    1| ap_ctrl_hs | resize_nearest_switch<ap_fixed<8, 2, 5, 3, 0>, config26> | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs | resize_nearest_switch<ap_fixed<8, 2, 5, 3, 0>, config26> | return value |
+|ap_start              |  in |    1| ap_ctrl_hs | resize_nearest_switch<ap_fixed<8, 2, 5, 3, 0>, config26> | return value |
+|start_full_n          |  in |    1| ap_ctrl_hs | resize_nearest_switch<ap_fixed<8, 2, 5, 3, 0>, config26> | return value |
+|ap_done               | out |    1| ap_ctrl_hs | resize_nearest_switch<ap_fixed<8, 2, 5, 3, 0>, config26> | return value |
+|ap_continue           |  in |    1| ap_ctrl_hs | resize_nearest_switch<ap_fixed<8, 2, 5, 3, 0>, config26> | return value |
+|ap_idle               | out |    1| ap_ctrl_hs | resize_nearest_switch<ap_fixed<8, 2, 5, 3, 0>, config26> | return value |
+|ap_ready              | out |    1| ap_ctrl_hs | resize_nearest_switch<ap_fixed<8, 2, 5, 3, 0>, config26> | return value |
+|start_out             | out |    1| ap_ctrl_hs | resize_nearest_switch<ap_fixed<8, 2, 5, 3, 0>, config26> | return value |
+|start_write           | out |    1| ap_ctrl_hs | resize_nearest_switch<ap_fixed<8, 2, 5, 3, 0>, config26> | return value |
+|image_0_V_V_dout      |  in |    8|   ap_fifo  |                        image_0_V_V                       |    pointer   |
+|image_0_V_V_empty_n   |  in |    1|   ap_fifo  |                        image_0_V_V                       |    pointer   |
+|image_0_V_V_read      | out |    1|   ap_fifo  |                        image_0_V_V                       |    pointer   |
+|image_1_V_V_dout      |  in |    8|   ap_fifo  |                        image_1_V_V                       |    pointer   |
+|image_1_V_V_empty_n   |  in |    1|   ap_fifo  |                        image_1_V_V                       |    pointer   |
+|image_1_V_V_read      | out |    1|   ap_fifo  |                        image_1_V_V                       |    pointer   |
+|image_2_V_V_dout      |  in |    8|   ap_fifo  |                        image_2_V_V                       |    pointer   |
+|image_2_V_V_empty_n   |  in |    1|   ap_fifo  |                        image_2_V_V                       |    pointer   |
+|image_2_V_V_read      | out |    1|   ap_fifo  |                        image_2_V_V                       |    pointer   |
+|image_3_V_V_dout      |  in |    8|   ap_fifo  |                        image_3_V_V                       |    pointer   |
+|image_3_V_V_empty_n   |  in |    1|   ap_fifo  |                        image_3_V_V                       |    pointer   |
+|image_3_V_V_read      | out |    1|   ap_fifo  |                        image_3_V_V                       |    pointer   |
+|resized_0_V_V_din     | out |    8|   ap_fifo  |                       resized_0_V_V                      |    pointer   |
+|resized_0_V_V_full_n  |  in |    1|   ap_fifo  |                       resized_0_V_V                      |    pointer   |
+|resized_0_V_V_write   | out |    1|   ap_fifo  |                       resized_0_V_V                      |    pointer   |
+|resized_1_V_V_din     | out |    8|   ap_fifo  |                       resized_1_V_V                      |    pointer   |
+|resized_1_V_V_full_n  |  in |    1|   ap_fifo  |                       resized_1_V_V                      |    pointer   |
+|resized_1_V_V_write   | out |    1|   ap_fifo  |                       resized_1_V_V                      |    pointer   |
+|resized_2_V_V_din     | out |    8|   ap_fifo  |                       resized_2_V_V                      |    pointer   |
+|resized_2_V_V_full_n  |  in |    1|   ap_fifo  |                       resized_2_V_V                      |    pointer   |
+|resized_2_V_V_write   | out |    1|   ap_fifo  |                       resized_2_V_V                      |    pointer   |
+|resized_3_V_V_din     | out |    8|   ap_fifo  |                       resized_3_V_V                      |    pointer   |
+|resized_3_V_V_full_n  |  in |    1|   ap_fifo  |                       resized_3_V_V                      |    pointer   |
+|resized_3_V_V_write   | out |    1|   ap_fifo  |                       resized_3_V_V                      |    pointer   |
++----------------------+-----+-----+------------+----------------------------------------------------------+--------------+
+
